@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gamesPlayed++;
 
         // Decide next step
-        if (gamesPlayed >= MAX_ROUNDS_BEFORE_BOSS) {
+        if (gamesPlayed >= MAX_ROUNDS_BEFORE_BOSS || (currentDifficulty == "Hard" && roundScore === currentRiddlePool.length) ) {
             startBossBattle();
         } else {
             // Show "Next Round" button or allow quitting
@@ -265,9 +265,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function determineNextDifficulty() {
-        if (gamesPlayed < 2) return { pool: easyRiddles, name: "Easy" };
-        if (gamesPlayed < 4) return { pool: mediumRiddles, name: "Medium" };
-        return { pool: hardRiddles, name: "Hard" };
+        if (currentDifficulty == "Easy" && roundScore === currentRiddlePool.length) return { pool: mediumRiddles, name: "Medium" };
+        if (currentDifficulty == "Medium" && roundScore === currentRiddlePool.length) return { pool: hardRiddles, name: "Hard" };
+        if (currentDifficulty == "Hard" && roundScore === currentRiddlePool.length) return { pool: hardRiddles, name: "Hard" };
+        return { pool: easyRiddles, name: "Easy" };
     }
 
     function setupNextRound() {
