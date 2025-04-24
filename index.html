@@ -3,32 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riddle Hunter Game</title>
+    <title>SP Warriors</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 600px; margin: auto; }
-        #game-area, #high-scores-area { display: none; /* Hidden initially */ }
-        #feedback { font-weight: bold; margin-top: 10px; min-height: 1.5em;}
-        #timer { color: red; font-weight: bold; }
-        #answer-input { margin: 5px 0; padding: 8px; width: calc(100% - 20px); }
-        button { padding: 10px 15px; cursor: pointer; margin-top: 10px;}
-        #high-scores-list { list-style: none; padding: 0; }
-        #high-scores-list li { margin-bottom: 5px; }
-        .correct { color: green; }
-        .incorrect { color: orange; }
-        .timeup { color: purple; }
-        .final-win { color: gold; font-size: 1.2em; }
-        .final-loss { color: darkred; font-size: 1.2em; }
-    </style>
 </head>
 <body>
 
-    <h1>🎯 Riddle Hunter! 🏹</h1>
+    <h1>🎯 SP WARRIORS! 🏹</h1>
 
     <div id="name-entry">
-        <label for="player-name">Welcome, brave hunter! What is your name?</label><br>
+        <label style="font-size: 2em" for="player-name">Welcome, brave hunter! What is your name? </label><br>
         <input type="text" id="player-name" name="player-name" required><br>
-        <button id="start-game-button">Start Hunting!</button>
+        <button id="start-game-button">Start Hunting!🦌 </button>
         <p id="welcome-message" style="margin-top: 10px;"></p>
     </div>
 
@@ -53,7 +39,7 @@
         <p>(Scores are saved locally in your browser)</p>
         <ul id="high-scores-list">
             </ul>
-        <button id="play-again-button">Play Again?</button>
+        <button id="play-again-button">Play Again?🐾</button>
     </div>
 
     <p id="final-message" style="margin-top: 20px; font-weight: bold;"></p>
