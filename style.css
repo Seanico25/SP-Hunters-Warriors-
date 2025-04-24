@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+
+/* General body styling */
+body {
+   
+    font-family: 'Cinzel', serif;
+    min-height: 100vh; /* Fill the full screen height */
+    display: center;
+    text-align: center;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 650px; /* Slightly wider */
+    margin: 20px auto; /* Add some margin top/bottom */
+    background-color: #f4f7f6; /* Light background */
+    background-image: url("/assets/images/test_image_bg.jpeg");
+    background-blend-mode: multiply;
+    color: #fff204; /* Darker text for better contrast */
+    border-radius: 8px; /* Rounded corners for the body container effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Headings */
+h1 {
+    font-size: 3em; 
+    color: #f4dc03; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 3em; /* Slightly smaller than h1 but still big */
+    color: #f2f4f6; /* Slightly lighter blue-grey */
+    border-bottom: 2px solid #ecf0f1; /* Light separator line */
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* Initially hidden sections */
+#game-area,
+#high-scores-area {
+    display: none;
+    background-color: #49391a; /* White background for game/score areas */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0); /* Inner shadow */
+}
+
+/* Input fields */
+input[type="text"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px); /* Account for padding and border */
+    border: 1px solid #bdc3c7; /* Grey border */
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 5px; /* Space between buttons */
+    border: none;
+    border-radius: 5px;
+    background-color: #fff374; /* Blue */
+    color: rgb(255, 7, 7);
+    font-size: 1em;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+    font-family: 'Cinzel', serif;
+    background-color: #000000; /* Darker blue on hover */
+}
+
+button:disabled {
+    background-color: #bdc3c7; /* Grey out disabled buttons */
+    cursor: not-allowed;
+}
+
+#quit-button {
+    background-color: #000000; /* Red for quit */
+}
+#quit-button:hover {
+    background-color: #c0392b; /* Darker red */
+}
+
+#play-again-button {
+    background-color: #000000; /* Green for play again */
+}
+#play-again-button:hover {
+    background-color: #a11e1e; /* Darker green */
+}
+
+
+/* Specific element styling */
+#feedback {
+    font-weight: bold;
+    margin-top: 15px;
+    min-height: 1.5em;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #ecf0f1; /* Light grey background for feedback */
+}
+
+#timer {
+    color: #e74c3c; /* Red for timer */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#total-score {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #27ae60; /* Green for score */
+}
+
+#welcome-message, #final-message {
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #000000; 
+    border-left: 4px solid #c22828; 
+    border-radius: 4px;
+}
+
+#high-scores-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#high-scores-list li {
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #f10505; 
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ecf0f1; /* Light grey horizontal rule */
+    margin: 20px 0;
+}
+
+/* Feedback message styling */
+.correct {
+    color: #27ae60; /* Green text */
+    background-color: #eafaf1; /* Light green background */
+    border-left: 4px solid #2ecc71;
+}
+
+.incorrect {
+    color: #e62222; /* Orange text */
+    background-color: #fdf3e6; /* Light orange background */
+    border-left: 4px solid #f74200;
+}
+
+.timeup {
+    color: #8e44ad; /* Purple text */
+    background-color: #f4eef6; /* Light purple background */
+    border-left: 4px solid #9b59b6;
+}
+
+.final-win {
+    color: #f1c40f; /* Gold text */
+    font-size: 1.2em;
+    background-color: #fef9e7; /* Light gold background */
+    border-left: 4px solid #f1c40f;
+}
+
+.final-loss {
+    color: #c0392b; /* Dark red text */
+    font-size: 1.2em;
+    background-color: #fae5e3; /* Light red background */
+    border-left: 4px solid #e74c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px 15px; /* Slightly larger tap target */
+        width: 100%; /* Full width buttons on small screens */
+        margin-top: 15px;
+        margin-right: 0;
+    }
+
+    #quit-button {
+         margin-top: 10px; /* Reduce space if stacked */
+    }
+
+    input[type="text"] {
+        font-size: 1.1em; /* Slightly larger text */
+    }
+}
