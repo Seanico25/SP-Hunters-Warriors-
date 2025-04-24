@@ -13,7 +13,7 @@ body {
     max-width: 650px; /* Slightly wider */
     margin: 20px auto; /* Add some margin top/bottom */
     background-color: #f4f7f6; /* Light background */
-    background-image: url("assets/images/test_image_bg.jpeg");
+    background-image: url("../assets/images/test_image_bg.jpeg");
     background-blend-mode: multiply;
     color: #fff204; /* Darker text for better contrast */
     border-radius: 8px; /* Rounded corners for the body container effect */
