@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const playAgainButton = document.getElementById('play-again-button');
     const finalMessageP = document.getElementById('final-message');
 
-    // --- Riddle Data (Converted from Python) ---
+    // --- Riddle Data (Converted from Python_script_game) ---
     const easyRiddles = [
         { question: "I am the king of the jungle. What am I?", answer: 'lion', animal: 'Lion' },
         { question: "What has a tail but no body?", answer: 'comet', animal: 'Comet' },
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startTimer(limit) {
-        stopTimer(); // Ensure previous timer is stopped
+        stopTimer(); // Ensures previous timer is stopped
         timeLeft = limit;
         startTime = Date.now();
         updateTimerDisplay();
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
          if (won) {
              feedbackP.textContent = "🎉 YOU WIN!!! You defeated Time itself! 🏆👑";
              feedbackP.className = 'final-win';
-             // Add boss bonus? Let's add 10 points for winning
+             //  Let's add 10 points for winning
              totalScore += 10;
              totalScoreSpan.textContent = totalScore;
              endGame(true); // End game, won boss
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isBossBattle = false;
         const difficultyInfo = determineNextDifficulty();
         currentDifficulty = difficultyInfo.name;
-        currentRiddlePool = [...difficultyInfo.pool]; // Copy the array
+        currentRiddlePool = [...difficultyInfo.pool]; // 
         shuffleArray(currentRiddlePool);
         currentRiddleIndex = 0;
         roundScore = 0;
